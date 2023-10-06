@@ -2,19 +2,19 @@ import getData from '../utils/getData';
 
 const Home =  async () => {
 
-    const characters = await getData();
+    const Coins = await getData();
 
     const view =  `
     
-    <div class="Characters">
-    ${characters.data.map(character => `
-        <article class="Character-item">
-            <a href="#/${character.id}/">
-                <h2>Name: ${character.name}</h2>
-                <p>Symbol: ${character.symbol}</p>
-                <p>Name id: ${character.nameid}</p>
-                <p>Rank: ${character.rank}</p>
-                <p>Price (USD): ${character.price_usd}</p>
+    <div class="Coins">
+    ${Coins.data.map(Coin => `
+        <article class="Coin-item">
+            <a href="#/${Coin.id}/">
+                <h2>Name: ${Coin.name}</h2>
+                <p>Symbol: ${Coin.symbol}</p>
+                <p>Name id: ${Coin.nameid}</p>
+                <p>Rank: ${Coin.rank}</p>
+                <p>Price (USD): ${Coin.price_usd}</p>
             </a>
         </article>
     `).join('')}

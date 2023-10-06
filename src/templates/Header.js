@@ -10,8 +10,8 @@ const Header = () => {
                         </a>  
                 </h1>
             </div>
-            <div> 
-            CoinLore
+            <div class= "Header-title"> 
+                CoinLore
             </div>
             <div class="Header-nav">
                 <a href="#/about">

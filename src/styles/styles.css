@@ -8,6 +8,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.Header-title {
+  font-size: 40px;
+}
+
 .Header-main {
   display: flex;
   justify-content: space-between;
@@ -45,7 +49,7 @@ body {
   justify-content: center;
 }
 
-.Characters {
+.Coin {
   margin-top: 50px;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
@@ -53,7 +57,7 @@ body {
   display: grid;
 }
 
-.Characters-inner {
+.Coin-inner {
   grid-template-columns: 1fr 2fr;
   grid-gap: 1.5rem;
   grid-row-gap: 1.5em;
@@ -62,7 +66,7 @@ body {
   align-items: center;
 }
 
-.Characters-card {
+.Coin-card {
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
   border-radius: 5px;
@@ -72,20 +76,20 @@ body {
   animation-name: fade;
 }
 
-.Characters-card img {
+.Coin-card img {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
 }
 
-.Characters-card h2 {
+.Coin-card h2 {
   font-size: 20px;
   font-weight: 400;
   text-align: center;
   color: #000000;
 }
 
-.Characters-card h3 {
+.Coin-card h3 {
   font-size: 30px;
   font-weight: 400;
   margin: 30px;
@@ -94,7 +98,7 @@ body {
   color: #000000;
 }
 
-.Characters-item {
+.Coin-item {
   text-decoration: none;
   box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
   border-radius: 5px;
@@ -104,13 +108,13 @@ body {
   animation-name: fade;
 }
 
-.Characters-item img {
+.Coin-item img {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
 }
 
-.Characters-item h2 {
+.Coin-item h2 {
   font-size: 18px;
   font-weight: 300;
   padding: 5px 10px;
@@ -118,7 +122,7 @@ body {
   justify-content: space-between;
 }
 
-.Characters-item a {
+.Coin-item a {
   text-decoration: none;
   color: #026C86;
 }
