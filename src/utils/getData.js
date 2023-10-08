@@ -1,16 +1,18 @@
-const API = 'https://api.coinlore.net/api/tickers/';
+const url = 'https://api.coinlore.net/api/';
 
 const getData = async (id) => {
-    const apiURL = id ? `${API}${id}` : API;
+    const url = 'https://api.coinlore.net/api/';
+    const apiURL = id ? `${url}tickers/${id}/` : `${url}tickers/`;
 
     try {
         const response = await fetch(apiURL);
         const data = await response.json();
         return data;
-    } catch(error) {
-        console.log('Fetch Error..!!', error);
-    };
-    
+    } catch (error) {
+        console.error('Fetch Error:', error);
+        return null;
+    }
 };
 
 export default getData;
+

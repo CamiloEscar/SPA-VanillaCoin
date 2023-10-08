@@ -1,13 +1,17 @@
 import getHash from "../utils/getHash";
 
-const getCoin = (coin) => 
-{
-    const id = getHash();
-    const product = coin.find((element) => 
-    {
-      return element._id === id ? element : null;
+const getCoin = (coins) => {
+    const id = getHash(); // Obtén el ID de la moneda desde el hash
+    if (!coins || !Array.isArray(coins.data)) {
+        return null; // Devuelve null si los datos no son válidos
+    }
+
+    const coin = coins.data.find((element) => {
+        return element.id === id;
     });
-    return product
+
+    return coin || null; // Devuelve null si no se encuentra la moneda
 };
 
 export default getCoin;
+

@@ -10,13 +10,20 @@
   "author": "Camilo Escar",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "babel-loader": "^8.1.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "babel-loader": "^8.3.0",
     "copy-webpack-plugin": "^6.1.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.4.1",
     "webpack": "^5.0.0",
     "webpack-cli": "^5.0.0",
     "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
   }
 }

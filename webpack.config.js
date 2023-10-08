@@ -20,6 +20,16 @@ module.exports = {
             loader: 'babel-loader',
             }
         },
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env', '@babel/preset-react'], // Asegúrate de incluir '@babel/preset-react' aquí
+            },
+          },
+        },
         {   test: /\.(img|url|png|svg|jpg|jpeg|gif)$/,
             use: {
              loader: "file-loader",
