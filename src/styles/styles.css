@@ -49,14 +49,14 @@ body {
   justify-content: center;
 }
 
-.Coin {
+.coin {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px; /* Espacio entre los elementos */
   justify-content: center;
 }
 
-/* .Coin {
+/* .coin {
   margin-top: 50px;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
@@ -64,39 +64,38 @@ body {
   display: grid;
 } */
 
-.Coin-inner {
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 1.5rem;
-  grid-row-gap: 1.5em;
+
+
+.coin-inner {
   display: grid;
-  margin-top: 200px;
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr); /* Cambiar de 3 a 2 columnas */
+  grid-gap: 20px;
+  text-align: center;
 }
 
-.Coin-card {
-  text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
-  border-radius: 5px;
-  margin: 0 0 20px 0;
-  display: block;
-  animation-duration: 2s;
-  animation-name: fade;
+.coin-card {
+    background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fade 2s;
 }
 
-.Coin-card img {
+.coin-card img {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
 }
 
-.Coin-card h2 {
+.coin-card h2 {
   font-size: 20px;
   font-weight: 400;
   text-align: center;
   color: #000000;
 }
 
-.Coin-card h3 {
+.coin-card h3 {
   font-size: 30px;
   font-weight: 400;
   margin: 30px;
@@ -106,7 +105,7 @@ body {
 }
 
 
-.Coin-item {
+.coin-item {
   text-decoration: none;
   text-align: center;
   color: #fff; /* Color de texto del botón */
@@ -122,13 +121,13 @@ body {
 
 }
 
-.Coin-item img {
+.coin-item img {
   width: 100%;
   height: auto;
   border-radius: 5px 5px 0 0;
 }
 
-.Coin-item h2 {
+.coin-item h2 {
   font-size: 18px;
   font-weight: 300;
   padding: 5px 10px;
@@ -136,7 +135,7 @@ body {
   justify-content: space-between;
 }
 
-.Coin-item a {
+.coin-item a {
   text-decoration: none;
   color: #026C86;
 }

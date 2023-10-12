@@ -1,19 +1,18 @@
-import getHash from '../utils/getHash';
 import getData from '../utils/getData';
 
 const Home = async () => {
     const coins = await getData(); // Obtén la lista de monedas
 
     const view = `
-        <div class="Coins">
-            ${coins.data.map(Coin => `
-                <article class="Coin-item">
-                    <a href="#/${Coin.id}/">
-                        <h2>Name: ${Coin.name}</h2>
-                        <p>Symbol: ${Coin.symbol}</p>
-                        <p>Name id: ${Coin.nameid}</p>
-                        <p>Rank: ${Coin.rank}</p>
-                        <p>Price (USD): ${Coin.price_usd}</p>
+        <div class="coins">
+            ${coins.data.map(coin => `
+                <article class="coin-item">
+                    <a href="#/${coin.id}/">
+                        <h2>Name: ${coin.name}</h2>
+                        <p>Symbol: ${coin.symbol}</p>
+                        <p>Name id: ${coin.nameid}</p>
+                        <p>Rank: ${coin.rank}</p>
+                        <p>Price (USD): ${coin.price_usd}</p>
                     </a>
                 </article>
             `).join('')}
