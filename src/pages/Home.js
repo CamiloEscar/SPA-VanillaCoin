@@ -4,17 +4,16 @@ const Home = async () => {
     const coins = await getData(); // Obtén la lista de monedas
 
     const view = `
-        <div class="coins">
+        <div class="coin-container">
             ${coins.data.map(coin => `
-                <article class="coin-item">
-                    <a href="#/${coin.id}/">
-                        <h2>Name: ${coin.name}</h2>
-                        <p>Symbol: ${coin.symbol}</p>
-                        <p>Name id: ${coin.nameid}</p>
-                        <p>Rank: ${coin.rank}</p>
-                        <p>Price (USD): ${coin.price_usd}</p>
-                    </a>
-                </article>
+                <div class="coin-card">
+                    <img src="https://cryptologos.cc/logos/${coin.nameid}-${coin.symbol.toLowerCase()}-logo.png" alt="${coin.name} logo" onerror="this.src='https://via.placeholder.com/150'">
+                    <h2>${coin.name}</h2>
+                    <h3>${coin.symbol}</h3>
+                    <p>Rank: #${coin.rank}</p>
+                    <p>Price: $${parseFloat(coin.price_usd).toFixed(2)}</p>
+                    <a href="#/${coin.id}/" class="view-more">View Details</a>
+                </div>
             `).join('')}
         </div>
     `;
@@ -23,5 +22,3 @@ const Home = async () => {
 }
 
 export default Home;
-
-
